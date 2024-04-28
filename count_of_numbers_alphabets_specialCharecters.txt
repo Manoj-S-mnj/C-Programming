@@ -1,0 +1,23 @@
+//Count the number of alphabets, Numbers, @ special charecters.......
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char a[100];
+    int alphabets=0,numbers=0,spec_char=0;
+    scanf("%[^\n]",&a);
+    for(int i=0;a[i]!='\0';i++){
+        if((a[i]>='a' && a[i]<='z') || (a[i]>='A' && a[i]<='Z')){
+            alphabets++;
+        }
+        else if(a[i]>='0' && a[i]<='9'){
+            numbers++;
+        }
+        else{
+            spec_char++;
+        }
+    }
+    printf("%d\n",alphabets);
+    printf("%d\n",numbers);
+    printf("%d",spec_char);
+    return 0;
+}
